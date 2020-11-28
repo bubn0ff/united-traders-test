@@ -55,7 +55,7 @@ h1 {
 .header {
   padding-top: 24px;
   padding-bottom: 99px;
-  background: url("../img/main-bg.png") no-repeat top center;
+  background: url("/img/main-bg.png") no-repeat top center;
   background-size: cover;
   color: #fff;
 }
@@ -167,7 +167,7 @@ h1 {
 }
 
 .nav-item:nth-child(1)::after {
-  content: url("../img/arrow-down.svg");
+  content: url("/img/arrow-down.svg");
   position: absolute;
   top: 18%;
   right: 0;
@@ -373,7 +373,7 @@ h1 {
 }
 
 .cards__img-1::before {
-  content: url("../img/icon_04.png");
+  content: url("/img/icon_04.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -381,7 +381,7 @@ h1 {
 }
 
 .cards__img-2::before {
-  content: url("../img/icon_05.png");
+  content: url("/img/icon_05.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -389,7 +389,7 @@ h1 {
 }
 
 .cards__img-3::before {
-  content: url("../img/icon_06.png");
+  content: url("/img/icon_06.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -397,7 +397,7 @@ h1 {
 }
 
 .cards__img-4::before {
-  content: url("../img/icon_07.png");
+  content: url("/img/icon_07.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -405,7 +405,7 @@ h1 {
 }
 
 .cards__img-5::before {
-  content: url("../img/icon_08.png");
+  content: url("/img/icon_08.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -413,7 +413,7 @@ h1 {
 }
 
 .cards__img-6::before {
-  content: url("../img/icon_09.png");
+  content: url("/img/icon_09.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -436,7 +436,7 @@ h1 {
 }
 
 .cards__title_img-1::before {
-  content: url("../img/icon_01.png");
+  content: url("/img/icon_01.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -444,7 +444,7 @@ h1 {
 }
 
 .cards__title_img-2::before {
-  content: url("../img/icon_02.png");
+  content: url("/img/icon_02.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -452,7 +452,7 @@ h1 {
 }
 
 .cards__title_img-3::before {
-  content: url("../img/icon_03.png");
+  content: url("/img/icon_03.png");
   display: block;
   margin-bottom: 25px;
   height: 64px;
@@ -561,7 +561,7 @@ h1 {
 }
 
 .footer__instagram::before {
-  content: url("../img/instagram.svg");
+  content: url("/img/instagram.svg");
   position: absolute;
   top: 9px;
   left: 9px;
