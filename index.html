@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link link rel="stylesheet" href="/css/reset.css">
+  <link link rel="stylesheet" href="/css/styles.css">
+  <link link rel="preconnect" href="https://fonts.gstatic.com">
+  <link link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <title>United Traders Test (with Bootstrap)</title>
+</head>
+<body>
+  
+  <!----------------------- < Header > ------------------------>
+  <header class="header">
+    <div class="container">
+      <!----------------------- < Навигация > ------------------------>
+      <div class="nav__main row align-items-center">
+        <!----------------------- < Logo > ------------------------>
+        <div class="col-8 col-sm-5 col-md-4 col-lg-3">
+          <div class="nav__logo">
+            <a href="#"><img src="./img/logo.png" class="nav__img" alt="Логотип компании"></a>
+          </div>
+        </div>
+        <!----------------------- </ Logo > ------------------------>
+        <!----------------------- < Menu > ------------------------>
+        <div class="col-9">
+          <nav class="menu">
+            <!----------------------- < Бургер-меню > ------------------------>
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <!----------------------- </ Бургер-меню> ------------------------>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">News & Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Support</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Contacts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link link" href="#">Buy Now</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!----------------------- </ Menu > ------------------------>
+      </div>
+      <!----------------------- </ Навигация > ------------------------>
+      <!----------------------- < Текст в header > ------------------------>
+      <div class="top-text">
+        <div class="row justify-content-center">
+          <div class="col-auto col-sm-8 col-md-8 col-lg-auto">
+            <h1 class="top-text__title">WE SOLVE <span><br></span> YOUR PROBLEMS</h1>
+          </div>
+          <div class="col-9">
+            <p class="top-text__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec accumsan velit. Ut gravida id sem id sodales. Aenean quis enim dui. Vestibulum ullamcorper vel urna quis congue.</p>
+          </div>
+        </div>  
+        
+      </div>
+      <!----------------------- </ Текст в header > ------------------------>
+    </div>
+  </header>
+  <!----------------------- </ Header > ------------------------>
+
+
+
+  <!----------------------- < Main > ------------------------>
+  <main class="cards">
+    <div class="container">
+      <!----------------------- < Секция 1 > ------------------------>
+      <section class="cards__section-1">
+        <div class="cards__main row">
+          <div class="col-12">
+            <!----------------------- < Заголовок карточек > ------------------------>
+            <div class="cards__text">
+              <p class="cards__text_title">Etiam ac nisl ac quam sodales scelerisque elementum quis purus.</p>
+            </div>
+            <!----------------------- </ Заголовок карточек > ------------------------>
+          </div>
+        </div>
+        <!----------------------- < Блок карточек > ------------------------>
+        <div class="cards__cards row">
+          <!----------------------- < Карточка №1 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content">
+              <p class="cards__title cards__title_img-1">Donec efficitur molestie</p>
+              <p class="cards__subtitle">Nulla pretium nunc in nulla placerat, sit amet porttitor enim ullamcorper. Curabitur ex erat, euismod ac vestibulum vel, viverra non lorem.</p>
+              <a href="#" class="cards__more link"><p>Learn More</p></a>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №1 > ------------------------>
+          <!----------------------- < Карточка №2 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content">
+              <p class="cards__title cards__title_img-2">Mauris interdum venenatis</p>
+              <p class="cards__subtitle">Vivamus cursus ante eu orci rutrum, vitae viverra ante dapibus. Vivamus porta molestie turpis, quis elementum nisi egestas eget.</p>
+              <a href="#" class="cards__more link"><p>Learn More</p></a>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №2 > ------------------------>
+          <!----------------------- < Карточка №3 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content">
+              <p class="cards__title cards__title_img-3">Cras sit amet</p>
+              <p class="cards__subtitle">Fusce suscipit, ante at imperdiet vehicula, ex augue feugiat enim, sed faucibus sem tortor quis turpis. Mauris lacinia neque id augue efficitur, ut feugiat massa efficitur.</p>
+              <a href="#" class="cards__more link"><p>Learn More</p></a>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №3 > ------------------------>
+        </div>
+        <!----------------------- </ Блок карточек > ------------------------>
+      </section>
+      <!----------------------- </ Секция 1 > ------------------------>
+      
+      <!----------------------- < Секция 2 > ------------------------>
+      <section class="cards__section-2">
+        <div class="cards__main row">
+          <div class="col-12">
+            <!----------------------- < Заголовок карточек > ------------------------>
+            <div class="cards__text">
+              <p class="cards__text_title">Etiam ac nisl ac quam sodales scelerisque elementum quis purus.</p>
+              <p class="cards__text_subtitle">Integer bibendum turpis sit amet pretium commodo. Cras justo elit, dapibus at viverra non, dapibus vitae est. Morbi facilisis mi non iaculis porttitor. Phasellus a nibh a lacus dignissim pharetra. Vivamus ullamcorper finibus mauris, sit amet volutpat enim sollicitudin sed.</p>
+            </div>
+            <!----------------------- </ Заголовок карточек > ------------------------>
+          </div>
+        </div>
+        <!----------------------- < Блок карточек > ------------------------>
+        <div class="cards__cards row">
+          <!----------------------- < Карточка №1 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content cards__body">
+              <p class="cards__title cards__img-1">Proin felis eros</p>
+              <p class="cards__subtitle">Iverra sed eros id, eleifend maximus tortor</p>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №1 > ------------------------>
+          <!----------------------- < Карточка №2 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content cards__body">
+              <p class="cards__title cards__img-2">Suspendisse potenti</p>
+              <p class="cards__subtitle">Vestibulum mi risus, aliquam vitae efficitur quis</p>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №2 > ------------------------>
+          <!----------------------- < Карточка №3 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content cards__body">
+              <p class="cards__title cards__img-3">Fusce pretium enim</p>
+              <p class="cards__subtitle">Quisque at dui nunc. Curabitur sodales, turpis at luctus suscipit, nisl leo dignissim turpis</p>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №3 > ------------------------>
+          <!----------------------- < Карточка №4 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content cards__body">
+              <p class="cards__title cards__img-4">Vivamus urna eros</p>
+              <p class="cards__subtitle">Fusce facilisis nunc a urna lacinia, nec sagittis felis efficitur. Phasellus commodo porttitor odio</p>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №4 > ------------------------>
+          <!----------------------- < Карточка №5 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content cards__body">
+              <p class="cards__title cards__img-5">Maecenas congue nisi</p>
+              <p class="cards__subtitle">Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur vulputate <a href="#" class="link">arcu nisi</a></p>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №5 > ------------------------>
+          <!----------------------- < Карточка №6 > ------------------------>
+          <div class="col-12 col-sm-6 col-md-4">
+            <div class="cards__content cards__body">
+              <p class="cards__title cards__img-6">Nullam purus velit</p>
+              <p class="cards__subtitle">Praesent ac turpis sit amet ex euismod congue vitae sit amet risus</p>
+            </div>
+          </div>
+          <!----------------------- </ Карточка №6 > ------------------------>
+        </div>
+        <!----------------------- </ Блок карточек > ------------------------>
+
+        <!----------------------- < Кнопка "Посмотреть все" > ------------------------>
+        <div class="view-all row">
+          <div class="col-12">
+            <div class="view-all__button">
+              <a href="#" class="view-all__link link">
+                <span class="view-all__btn">View All Our Products</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!----------------------- </ Кнопка "Посмотреть все" > ------------------------>
+      </section>
+      <!----------------------- </ Секция 2 > ------------------------>
+
+      <!----------------------- < Секция 3 > ------------------------>
+      <section class="cards__section-3">
+        <div class="cards__main row">
+          <div class="col-12">
+            <!----------------------- < Заголовок карточек > ------------------------>
+            <div class="cards__text">
+              <p class="cards__text_title">Wordlwide recognition</p>
+              <p class="cards__text_subtitle">Integer bibendum turpis sit amet pretium commodo. Cras justo elit, dapibus at viverra non, dapibus vitae est. </p>
+              <p class="cards__text_subtitle">Fusce pretium enim sit amet elementum eleifend. Quisque at dui nunc. Curabitur sodales, turpis at luctus suscipit, nisl leo dignissim turpis, quis blandit justo nulla sed nisi. Vivamus urna eros, malesuada non massa sed, vestibulum maximus dui. Fusce facilisis nunc a urna lacinia, nec sagittis felis efficitur. Phasellus commodo porttitor odio, eu commodo nisi vehicula ut. Maecenas congue nisi lorem, et maximus ante vestibulum eu. Vivamus non imperdiet ex.</p>
+            </div>
+            <!----------------------- </ Заголовок карточек > ------------------------>
+          </div>
+        </div>
+
+        <!----------------------- < Логотипы брендов > ------------------------>
+        <div class="brands row justify-content-center align-items-center">
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="brands__main">
+              <img src="/img/image_01.png" class="brands__img" alt="Бренд 1">
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="brands__main">
+              <img src="/img/image_02.png" class="brands__img" alt="Бренд 2">
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="brands__main">
+              <img src="/img/image_03.png" class="brands__img" alt="Бренд 3">
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="brands__main">
+              <img src="/img/image_04.png" class="brands__img" alt="Бренд 4">
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-2">
+            <div class="brands__main">
+              <img src="/img/image_05.png" class="brands__img" alt="Бренд 5">
+            </div>
+          </div>
+        </div>
+        <!----------------------- </ Логотипы брендов > ------------------------>
+      </section>
+      <!----------------------- </ Секция 3 > ------------------------>
+    </div>
+  </main>
+  <!----------------------- </ Main > ------------------------>
+
+
+
+  <!----------------------- < Footer > ------------------------>
+  <footer class="footer">
+    <div class="container">
+      <!----------------------- < Footer menu > ------------------------>
+      <div class="footer__menu row justify-content-center">
+        <div class="col-12 col-sm-auto">
+          <a href="#" class="footer__menu_link link">
+            <p class="footer__menu_item">PRIVACY POLICY</p>
+          </a>
+        </div>
+        <div class="col-12 col-sm-auto">
+          <a href="#" class="footer__menu_link link">
+            <p class="footer__menu_item">ABOUT US</p>
+          </a>
+        </div>
+        <div class="col-12 col-sm-auto">
+          <a href="#" class="footer__menu_link link">
+            <p class="footer__menu_item">SUPPORT</p>
+          </a>
+        </div>
+      </div>
+      <!----------------------- </ Footer menu > ------------------------>
+
+      <!----------------------- < Соцсети > ------------------------>
+      <div class="footer__social-n row justify-content-center">
+        <div class="col-auto">
+          <div class="footer__social_item">
+            <svg class="footer__facebook" width="16" height="31" viewBox="0 0 16 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.3975 0.00645007L11.5598 0C7.24832 0 4.46205 2.99444 4.46205 7.62914V11.1467H0.603437C0.270007 11.1467 0 11.4298 0 11.7791V16.8756C0 17.2249 0.270315 17.5077 0.603437 17.5077H4.46205V30.3679C4.46205 30.7172 4.73205 31 5.06548 31H10.0999C10.4333 31 10.7033 30.7168 10.7033 30.3679V17.5077H15.2149C15.5483 17.5077 15.8184 17.2249 15.8184 16.8756L15.8202 11.7791C15.8202 11.6114 15.7565 11.4508 15.6435 11.3321C15.5305 11.2134 15.3766 11.1467 15.2165 11.1467H10.7033V8.16482C10.7033 6.73161 11.0293 6.00405 12.8116 6.00405L15.3969 6.00308C15.73 6.00308 16 5.71992 16 5.37097V0.638557C16 0.289931 15.7303 0.00709508 15.3975 0.00645007Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="footer__social_item">
+            <svg class="footer__twitter" width="30" height="27" viewBox="0 0 30 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 3.88884C28.8958 4.39441 27.7111 4.73729 26.4663 4.89036C27.7373 4.10386 28.7103 2.85637 29.1714 1.37444C27.9791 2.10279 26.6631 2.63167 25.2608 2.91837C24.138 1.68054 22.5407 0.909546 20.7692 0.909546C17.3705 0.909546 14.6147 3.75714 14.6147 7.26723C14.6147 7.76505 14.6691 8.25128 14.7741 8.71623C9.66006 8.4508 5.12531 5.91898 2.09026 2.07179C1.55972 3.00939 1.2579 4.10189 1.2579 5.26808C1.2579 7.4745 2.34521 9.42132 3.99491 10.5603C2.98634 10.5255 2.03776 10.2388 1.20732 9.76222V9.84165C1.20732 12.9217 3.32942 15.4923 6.14325 16.0773C5.62771 16.2207 5.08408 16.3001 4.52168 16.3001C4.12428 16.3001 3.73996 16.2594 3.36315 16.1819C4.14673 18.7099 6.41884 20.5482 9.11085 20.5986C7.0056 22.3033 4.35109 23.3164 1.4679 23.3164C0.97114 23.3164 0.481826 23.2854 6.10352e-05 23.2292C2.72393 25.0366 5.95771 26.0904 9.4333 26.0904C20.7543 26.0904 26.9425 16.4008 26.9425 7.99755L26.9219 7.17428C28.131 6.28313 29.177 5.16349 30 3.88884Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="col-auto">
+          <div class="footer__social_item footer__instagram"></div>
+        </div>
+      </div>
+      <!----------------------- </ Соцсети > ------------------------>
+
+      <!----------------------- < Copyright > ------------------------>
+      <div class="footer__copyright row">
+        <div class="col-12">
+          <p class="footer__copyright_txt">Copyright © 1999 - 2019</p>
+        </div>
+      </div>
+      <!----------------------- </ Copyright > ------------------------>
+    </div>
+  </footer>
+  <!----------------------- </ Footer > ------------------------>
+</body>
+</html>

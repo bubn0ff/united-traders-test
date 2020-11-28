@@ -1,0 +1,633 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// ================================ Блок переменных ================================ 
+
+$color-font: #fff;
+$color-font-main: #000;
+$color-background-burger: #170c2b;
+$color-cards-bgd: #FAFAFA;
+$color-footer: #19263F;
+
+$color-hover: #FFFF00;
+$color-active: #FF0000;
+
+$font-size-min: 14px;
+$font-size-mid: 16px;
+$font-size-max: 18px;
+
+
+
+// ================================ Общие стили ================================ 
+
+body {
+  // Использовал !important потому, что Bootstrap перекрывает моё font-family
+  font-family: 'PT Sans', sans-serif !important;
+  font-weight: 400;
+  color: $color-font-main;
+}
+
+.link, .link:hover,
+.link:active, .link:visited {
+  text-decoration: none;
+
+  // .link:hover
+  &:hover {
+    color: $color-hover;
+  }
+
+  // .link:active
+  &:active {
+    color: $color-active;
+  }
+
+  // .link:focus
+  &:focus {
+    outline: 1px solid orange;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.header, .footer {
+  max-width: 100vw;
+}
+
+
+
+// ================================ Блок шаблонов и миксинов ================================ 
+
+@mixin breakpoint-lg {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+
+@mixin breakpoint {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+
+// ================================ Контейнеры ================================ 
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+
+
+// ================================ Блок Header ================================ 
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 99px;
+  background: url('/img/main-bg.png') no-repeat top center;
+  background-size: cover;
+  color: $color-font;
+}
+
+// --------------------- < Навигация  > ---------------------
+.nav {
+
+  @include breakpoint-lg() {
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 80px 0;
+    background-color: $color-background-burger;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    z-index: 1;
+  }
+
+  // .nav__main
+  &__main {
+    margin-bottom: 94px;
+  }
+
+  // .nav__logo
+  &__logo {
+    cursor: pointer;
+  }
+}
+
+.menu {
+  line-height: 21px;
+  font-size: $font-size-mid;
+  margin-left: 31px;
+  margin-top: -22px;
+
+  // .menu__btn
+  &__btn {
+    display: none;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+
+    @include breakpoint-lg() {
+      display: flex;
+    }
+  }
+
+  &__btn > span,
+  &__btn > span::before,
+  &__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition-duration: .25s;
+  }
+
+  &__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+
+  &__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+}
+
+.nav-item {
+  position: relative;
+  
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3) {
+    margin-right: 30px;
+
+    @media (max-width: 1200px) {
+      margin-right: 15px;
+    }
+
+    @include breakpoint-lg() {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  &:nth-child(1)::after {
+    content: url('/img/arrow-down.svg');
+    position: absolute;
+    top: 18%;
+    right: 0;
+
+    @include breakpoint-lg() {
+      display: none;
+    }
+  }
+
+  &:nth-child(5) {
+    margin-left: auto;
+
+    @include breakpoint-lg() {
+      margin-left: 0;
+    }
+  }
+}
+
+.nav-link {
+  color: $color-font;
+  line-height: 21px;
+
+  @include breakpoint-lg() {
+    display: block;
+    padding: 24px;
+    color: #fff;
+    font-size: 24px;
+    transition-duration: .25s;
+  }
+}
+// --------------------- </ Навигация  > ---------------------
+
+// --------------------- < Текст в header  > ---------------------
+.top-text {
+  text-align: center;
+
+  // .top-text__title
+  &__title {
+    margin-bottom: 84px;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+
+    @include breakpoint-lg() {
+      font-size: 40px;
+    }
+
+    @include breakpoint-md() {
+      font-size: 36px;
+    }
+
+    @include breakpoint-sm() {
+      font-size: 30px;
+    }
+
+    @include breakpoint() {
+      font-size: 26px;
+    }
+
+    & > span {
+      @media (max-width: 320px) {
+        display: none;
+      }
+    }
+  }
+
+  // .top-text__subtitle
+  &__subtitle {
+    font-size: $font-size-max;
+    line-height: 23px;
+
+    @include breakpoint() {
+      font-size: $font-size-min;
+    }
+  }
+}
+// --------------------- </ Текст в header  > ---------------------
+
+// --------------------- </ Бургер меню  > ---------------------
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .nav {
+  right: 0;
+}
+// --------------------- </ Бургер меню  > ---------------------
+
+
+
+// ================================ Блок Main ================================ 
+
+// --------------------- < Карточки > ---------------------
+.cards {
+  padding: 80px 0 0 0;
+
+  // .cards__section-2
+  &__section-2 {
+    margin-bottom: 80px;
+  }
+
+  // .cards__section-3
+  &__section-3 {
+    margin-bottom: 117px;
+  }
+
+  // .cards__main
+  &__main {
+    margin-bottom: 14px;
+  }
+
+  // .cards__text
+  &__text {
+
+    // .cards__text_title
+    &_title {
+      text-align: center;
+      font-size: $font-size-max;
+      line-height: 23px;
+      font-weight: 700;
+
+      @include breakpoint() {
+        font-size: $font-size-mid;
+      }
+    }
+
+    // .cards__text_subtitle
+    &_subtitle {
+      font-size: $font-size-mid;
+      line-height: 21px;
+      padding-top: 14px;
+
+      @include breakpoint() {
+        font-size: $font-size-min;
+      }
+    }
+  }
+
+  // .cards__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 350px;
+    padding: 40px 35px 30px 35px;
+    margin-bottom: 30px;
+    background-color: $color-cards-bgd;
+
+    @include breakpoint-sm() {
+      min-height: 0;
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  // .cards__body
+  &__body {
+    min-height: 300px;
+    background-color: $color-font;
+
+    @include breakpoint-lg() {
+      min-height: 350px;
+    }
+
+    @include breakpoint-md() {
+      min-height: 300px;
+    }
+
+    @include breakpoint-sm() {
+      min-height: 250px;
+    }
+  }
+
+  // .cards__img-1
+  &__img-1::before {
+    content: url('/img/icon_04.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+  }
+
+  // .cards__img-2
+  &__img-2::before {
+    content: url('/img/icon_05.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+  }
+
+  // .cards__img-3
+  &__img-3::before {
+    content: url('/img/icon_06.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+  }
+
+  // .cards__img-4
+  &__img-4::before {
+    content: url('/img/icon_07.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+  }
+
+  // .cards__img-5
+  &__img-5::before {
+    content: url('/img/icon_08.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+  }
+
+  // .cards__img-6
+  &__img-6::before {
+    content: url('/img/icon_09.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+  }
+
+  // .cards__title
+  &__title {
+    text-align: center;
+    font-size: $font-size-max;
+    line-height: 23px;
+    font-weight: 700;
+    position: relative;
+    min-height: 120px;
+
+    @include breakpoint() {
+      font-size: $font-size-mid;
+    }
+
+    // .cards__title_img-1
+    &_img-1::before {
+      content: url('/img/icon_01.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+    }
+
+    // .cards__title_img-2
+    &_img-2::before {
+      content: url('/img/icon_02.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+    }
+
+    // .cards__title_img-3
+    &_img-3::before {
+      content: url('/img/icon_03.png');
+      display: block;
+      margin-bottom: 25px;
+      height: 64px;
+      min-height: 100%;
+    }
+  }
+
+  // .cards__cards
+  &__cards {
+    margin-bottom: 82px;
+  }
+
+  // .cards__subtitle
+  &__subtitle {
+    font-size: $font-size-min;
+    line-height: 18px;
+  }
+
+  // .cards__more
+  &__more {
+    text-align: center;
+    margin-top: auto;
+    
+    &>p {
+      margin-bottom: 0;
+    }
+  }
+}
+// --------------------- </ Карточки > ---------------------
+
+// --------------------- < Кнопка "Посмотреть все" > ---------------------
+.view-all {
+  text-align: center;
+  font-size: $font-size-min;
+  line-height: 18px;
+
+  @include breakpoint() {
+    font-size: 12px;
+  }
+
+  // .view-all__link
+  &__link {
+    color: $color-font-main;
+  }
+
+  // .view-all__btn
+  &__btn {
+    border: 1px solid #85B657;
+    padding: 18px 50px;
+    border-radius: 5px;
+
+    @include breakpoint() {
+      padding: 10px;
+    }
+  }
+  
+}
+// --------------------- </ Кнопка "Посмотреть все" > ---------------------
+
+
+.brands {
+
+  // .brands__main
+  &__main {
+    text-align: center;
+  }
+
+  // .brands__img
+  &__img {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+// ================================ Блок Footer ================================ 
+
+.footer {
+  padding: 40px 0 52px 0;
+  background: $color-footer;
+  color: $color-font;
+  text-align: center;
+
+  // .footer__menu
+  &__menu {
+    line-height: 21px;
+    font-size: $font-size-mid;
+
+    // .footer__menu_link
+    &_link {
+      color: $color-font;
+    }
+  }
+
+  // .footer__social-n
+  &__social-n {
+    margin-top: 12px;
+    margin-bottom: 28px;
+  }
+
+  // .footer__social_item
+  &__social_item {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+  }
+
+  // .footer__facebook
+  &__facebook {
+    position: absolute;
+    top: 9px;
+    left: 16px;
+  }
+
+  // .footer__twitter
+  &__twitter {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+  }
+
+  // .footer__instagram
+  /* Только instagram.svg вставился через css, а прочие сети не получилось сделать так же!
+    Хрен знает, почему. Всё перепробовал, искал причины, но не смог понять, почему только один векторный
+    файл вставился нормально, а остальные - никак. Даже в панели разработчика было "Не могу открыть 
+    изображение"!!! Поэтому прочие сети вставил в html.
+  */
+  &__instagram::before {
+    content: url('/img/instagram.svg');
+    position: absolute;
+    top: 9px;
+    left: 9px;
+  }
+
+  // .footer__copyright
+  &__copyright {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 700;
+  }
+}
