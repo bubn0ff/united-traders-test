@@ -2,7 +2,7 @@
 
 Сверстать страницу по макету.
 
-![Logo](./img/site.jpg)
+![Logo](./img/site-small.jpg)
 
 Полное описание тестового задания: [здесь](test-markup-task.md)
 
