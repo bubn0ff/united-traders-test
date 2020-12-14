@@ -192,6 +192,11 @@ h1 {
 
 .nav-item {
   position: relative;
+
+  @include breakpoint-lg() {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
   
   &:nth-child(1),
   &:nth-child(2),
@@ -402,55 +407,85 @@ h1 {
   // .cards__img-1
   &__img-1::before {
     content: url('../img/icon_04.png');
-      display: block;
-      margin-bottom: 25px;
-      height: 64px;
-      min-height: 100%;
+    display: block;
+    margin-bottom: 25px;
+    height: 64px;
+    min-height: 100%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      margin-bottom: -25px;
+    }
   }
 
   // .cards__img-2
   &__img-2::before {
     content: url('../img/icon_05.png');
-      display: block;
-      margin-bottom: 25px;
-      height: 64px;
-      min-height: 100%;
+    display: block;
+    margin-bottom: 25px;
+    height: 64px;
+    min-height: 100%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      margin-bottom: -25px;
+    }
   }
 
   // .cards__img-3
   &__img-3::before {
     content: url('../img/icon_06.png');
-      display: block;
-      margin-bottom: 25px;
-      height: 64px;
-      min-height: 100%;
+    display: block;
+    margin-bottom: 25px;
+    height: 64px;
+    min-height: 100%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      margin-bottom: -25px;
+    }
   }
 
   // .cards__img-4
   &__img-4::before {
     content: url('../img/icon_07.png');
-      display: block;
-      margin-bottom: 25px;
-      height: 64px;
-      min-height: 100%;
+    display: block;
+    margin-bottom: 25px;
+    height: 64px;
+    min-height: 100%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      margin-bottom: -25px;
+    }
   }
 
   // .cards__img-5
   &__img-5::before {
     content: url('../img/icon_08.png');
-      display: block;
-      margin-bottom: 25px;
-      height: 64px;
-      min-height: 100%;
+    display: block;
+    margin-bottom: 25px;
+    height: 64px;
+    min-height: 100%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      margin-bottom: -25px;
+    }
   }
 
   // .cards__img-6
   &__img-6::before {
     content: url('../img/icon_09.png');
-      display: block;
-      margin-bottom: 25px;
-      height: 64px;
-      min-height: 100%;
+    display: block;
+    margin-bottom: 25px;
+    height: 64px;
+    min-height: 100%;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+      /* IE10+ specific styles go here */  
+      margin-bottom: -25px;
+    }
   }
 
   // .cards__title
@@ -473,6 +508,11 @@ h1 {
       margin-bottom: 25px;
       height: 64px;
       min-height: 100%;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        /* IE10+ specific styles go here */  
+        margin-bottom: -25px;
+      }
     }
 
     // .cards__title_img-2
@@ -482,6 +522,11 @@ h1 {
       margin-bottom: 25px;
       height: 64px;
       min-height: 100%;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        /* IE10+ specific styles go here */  
+        margin-bottom: -25px;
+      }
     }
 
     // .cards__title_img-3
@@ -491,6 +536,11 @@ h1 {
       margin-bottom: 25px;
       height: 64px;
       min-height: 100%;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        /* IE10+ specific styles go here */  
+        margin-bottom: -25px;
+      }
     }
   }
 
@@ -612,13 +662,7 @@ h1 {
   }
 
   // .footer__instagram
-  /* Только instagram.svg вставился через css, а прочие сети не получилось сделать так же!
-    Хрен знает, почему. Всё перепробовал, искал причины, но не смог понять, почему только один векторный
-    файл вставился нормально, а остальные - никак. Даже в панели разработчика было "Не могу открыть 
-    изображение"!!! Поэтому прочие сети вставил в html.
-  */
-  &__instagram::before {
-    content: url('../img/instagram.svg');
+  &__instagram {
     position: absolute;
     top: 9px;
     left: 9px;
